@@ -29,6 +29,7 @@ public class UserController {
         asyncExecutorService.asyncTest();
         List<User> userList = userService.getUserList();
         long end = System.currentTimeMillis();
+        System.out.println("=============================");
         System.out.println("cost =========================> "+(end-start)+"ms");
         return new Result<>(200,"查询成功",userList);
     }
